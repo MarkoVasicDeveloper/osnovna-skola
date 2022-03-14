@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+@import "../../Styles/styles.scss";
+
+header {
+  width: 100%;
+  height: 4rem;
+  background-color: #aaaaff22;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.2rem 1rem;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+
+  .logo {
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .navContainer {
+    width: 100%;
+    height: 80%;
+    padding-right: 5rem;
+    flex-grow: 4;
+    flex-basis: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    .div-button {
+      width: 150px;
+      height: 100%;
+      margin: 0rem 1rem;
+      position: relative;
+
+      button {
+        @include button();
+      }
+
+      .menuLessons {
+        position: absolute;
+        width: 300px;
+        height: auto;
+        z-index: 10;
+        left: -50%;
+        top: 120%;
+      }
+
+      .hidden {
+        display: none;
+      }
+    }
+  }
+}

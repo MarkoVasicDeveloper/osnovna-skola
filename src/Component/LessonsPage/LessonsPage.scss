@@ -1,0 +1,58 @@
+@import "../../Styles/styles.scss";
+
+.lessonsSection {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  font-family: $primaryFont;
+
+  .lessonsChoice {
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: #091b3ccc;
+    padding: 0.5em;
+
+    .title-div {
+      text-align: center;
+      color: $secondaryTextColor;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    }
+
+    .lessonsDiv {
+      h3 {
+        color: $primaryTextColor;
+        font-style: italic;
+        text-transform: uppercase;
+      }
+      border-bottom: 1px dashed $secondaryTextColor;
+      margin: 1rem 0rem;
+    }
+
+    .button {
+      @include button();
+      margin-bottom: 0.5rem;
+      &:hover {
+        background-color: $thirdColor;
+      }
+    }
+  }
+
+  .lessonPreview {
+    flex-grow: 4;
+    flex-basis: 0;
+    padding-left: 2rem;
+    display: flex;
+    gap: 2rem;
+    .lessonView {
+      flex-grow: 2;
+      flex-basis: 0;
+    }
+    .comercial {
+      flex-grow: 1;
+      flex-basis: 0;
+      height: 85vh;
+      background-color: #091b3ccc;
+    }
+  }
+}

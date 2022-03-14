@@ -1,0 +1,64 @@
+@import "../../../Styles/styles.scss";
+.menuContainer {
+  @include navMenu();
+  .optionsBox {
+    .close {
+      @include closeButton();
+    }
+
+    h2 {
+      text-align: center;
+      color: $secondaryTextColor;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+    }
+    p {
+      text-align: center;
+      color: $primaryTextColor;
+    }
+
+    .pickGrade {
+      margin: 1rem 0rem;
+      display: flex;
+      justify-content: space-evenly;
+      input {
+        display: none;
+      }
+      label {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid #091b3ccc;
+        border-radius: 5px;
+        margin: 0rem 0.5rem;
+        font-size: 1.5rem;
+        color: $primaryTextColor;
+
+        &:hover {
+          background-color: $thirdColor;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .pickLessonsContainer {
+    button {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background-color: #793ea5;
+      }
+
+      svg {
+        margin-right: 0.5rem;
+        color: #fec400;
+        margin-left: 20%;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../Styles/styles.scss";
+
+.menuContainerKviz {
+  @include navMenu();
+  position: absolute;
+  left: -50%;
+  padding-top: 1.2rem;
+  .close {
+    @include closeButton();
+  }
+  .kvizItem {
+    color: $primaryTextColor;
+    padding: 0rem 0.3rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    &:hover {
+      background-color: $thirdColor;
+      border-radius: 20px;
+      border: 1px solid #fec400;
+    }
+    svg {
+      color: $secondaryTextColor;
+      width: 20px;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .optionsLessonsKviz {
+    margin: 1rem 0rem 0.5rem;
+    label {
+      color: $primaryTextColor;
+      margin-right: 0.5rem;
+    }
+    select {
+      margin-right: 0.5rem;
+      border: 1px solid #fec400;
+      border-radius: 3px;
+      background-color: transparent;
+      color: $primaryTextColor;
+
+      option {
+        background-color: $backgroundColor;
+        color: $primaryTextColor;
+      }
+    }
+  }
+}
